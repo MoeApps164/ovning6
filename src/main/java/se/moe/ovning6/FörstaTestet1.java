@@ -18,9 +18,27 @@ public class FörstaTestet1 {
         // 3. Gå till en webbsida (Demo Web Shop)
         driver.get("https://demowebshop.tricentis.com/");
         WebElement element = driver.findElement(By.id("dialog-notifications-success"));
+
         WebElement element1 = driver.findElement(By.id("small-searchterms"));
+
+        WebElement element2 = driver.findElement(By.name("q"));
+
+        System.out.println("Element hittat: " + element2.getTagName());
         System.out.println("Element hittat: " + element.getTagName());
         System.out.println("Element hittat: " + element1.getTagName());
+
+
+
+        element2.sendKeys("Laptop");
+        element2.submit();
+
+        WebElement element3= driver.findElement(By.name("q"));
+
+
+        element3.clear();
+        element3.sendKeys("phone");
+        element3.submit();
+
 
 
 
@@ -32,7 +50,7 @@ public class FörstaTestet1 {
 
         // 5. Pausa 3 sekunder så du ser sidan
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
