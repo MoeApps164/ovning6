@@ -17,27 +17,17 @@ public class FörstaTestet1 {
 
         // 3. Gå till en webbsida (Demo Web Shop)
         driver.get("https://demowebshop.tricentis.com/");
-        WebElement element = driver.findElement(By.id("dialog-notifications-success"));
 
-        WebElement element1 = driver.findElement(By.id("small-searchterms"));
-
-        WebElement element2 = driver.findElement(By.name("q"));
-
-        System.out.println("Element hittat: " + element2.getTagName());
+        WebElement element = driver.findElement(By.className("search-box-text"));
         System.out.println("Element hittat: " + element.getTagName());
-        System.out.println("Element hittat: " + element1.getTagName());
+
+        element.sendKeys("Camera");
+        element.submit();
 
 
+         System.out.println("Ny Titel" + driver.getTitle ());
+        System.out.println("url" + driver.getCurrentUrl ());
 
-        element2.sendKeys("Laptop");
-        element2.submit();
-
-        WebElement element3= driver.findElement(By.name("q"));
-
-
-        element3.clear();
-        element3.sendKeys("phone");
-        element3.submit();
 
 
 
