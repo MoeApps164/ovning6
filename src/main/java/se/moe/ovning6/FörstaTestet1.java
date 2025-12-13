@@ -16,22 +16,6 @@ public class FörstaTestet1 {
         WebDriver driver = new ChromeDriver();
 
         // 3. Gå till en webbsida (Demo Web Shop)
-        driver.get("https://demowebshop.tricentis.com/");
-
-        WebElement element = driver.findElement(By.className("search-box-text"));
-        System.out.println("Element hittat: " + element.getTagName());
-
-        element.sendKeys("Camera");
-        element.submit();
-
-
-         System.out.println("Ny Titel" + driver.getTitle ());
-        System.out.println("url" + driver.getCurrentUrl ());
-
-
-
-
-
 
 
 
