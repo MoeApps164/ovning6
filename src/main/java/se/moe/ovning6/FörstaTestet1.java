@@ -19,12 +19,12 @@ public class FörstaTestet1 {
         driver.get("https://demowebshop.tricentis.com/");
 
 
-        WebElement registerElement = driver.findElement(By.partialLinkText("Log"));
+        WebElement elementAtribut = driver.findElement(By.cssSelector("a[href='/jewelry']" ));
+         System.out.println(elementAtribut.getText());
+         elementAtribut.click();
+        System.out.println("Titeln  "  +  driver.getTitle());
+        System.out.println("URL  "  +  driver.getCurrentUrl());
 
-        registerElement.click();
-
-        System.out.println( "Ny sidtitel " + driver.getTitle());
-        System.out.println( "Ny Url efter klick " + driver.getCurrentUrl());
 
 
         // 4. Hämta sidans titel och skriv ut i IntelliJ
