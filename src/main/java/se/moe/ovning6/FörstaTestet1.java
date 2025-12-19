@@ -19,11 +19,23 @@ public class FörstaTestet1 {
         driver.get("https://demowebshop.tricentis.com/");
 
 
-        WebElement elementAtribut = driver.findElement(By.cssSelector("a[href='/jewelry']" ));
-         System.out.println(elementAtribut.getText());
-         elementAtribut.click();
-        System.out.println("Titeln  "  +  driver.getTitle());
-        System.out.println("URL  "  +  driver.getCurrentUrl());
+        WebElement registerLink = driver.findElement(
+                By.xpath("//a[text()='Register']") );
+
+        registerLink.click();
+
+        System.out.println("Titel efter klick: " + driver.getTitle());
+        System.out.println("URL efter klick: " + driver.getCurrentUrl());
+
+
+        WebElement loginLink = driver.findElement(
+
+        By.xpath("//a[text()='Log in']") );
+        loginLink.click();
+
+
+        System.out.println("Titel efter klick: " + driver.getTitle());
+        System.out.println("URL efter klick: " + driver.getCurrentUrl());
 
 
 
